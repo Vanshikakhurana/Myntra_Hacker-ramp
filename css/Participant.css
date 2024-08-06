@@ -1,0 +1,29 @@
+*{
+    background-color: EDEAE7;
+}
+html{
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0px 0px;
+}
+header img {
+    width: 53px;
+    height: 45px;
+}
+header div a {
+    padding: 0px 40px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#Participant, #Learderboard{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
