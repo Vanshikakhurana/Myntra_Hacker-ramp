@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra: Rakhi Contest</title>
+    <script src="https://kit.fontawesome.com/1551dbdcbe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/RakhiConstest.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <img src="./img/Logo.png" alt="Logo of Myntra" draggable="false">
+        <div class="menu">
+            <a href="./MainWeb.html">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#prizes">PRIZES</a>
+            <a href="#how">HOW</a>
+            <a href="#form">SUBMIT</a>
+        </div>
+    </header> 
+    
+    <!-- banner section -->
+    <section class="main-menu">
+        <div class="contest-main-menu">
+            <a href="#form"><img src="./img/banner.jpg" alt="" draggable="false"></a>
+        </div>
+    </section>
+
+    <!-- about us section -->
+    <section class="about" id="about">
+        <div class="about">
+            <h2>About the Contest</h2>
+            <p>The Raksha Bandhan Fashion Contest is an exciting opportunity to showcase your unique style and creativity. Celebrating the special bond between siblings, this contest invites participants to submit their most stylish and innovative Raksha Bandhan outfits. Whether you prefer traditional attire or modern fashion, this is your chance to shine and share your fashion-forward ideas with the world. Join us in celebrating this beautiful festival by participating in our contest and standing a chance to win amazing prizes. Get ready to express your individuality and make this Raksha Bandhan truly memorable!</p>
+        </div>
+    </section>
+
+    <!-- prizes section -->
+    <div class="prizes" id="prizes">
+        <h2>Our Prizes</h2>
+        <p>Win gift vouchers, fashion merchandise, and get featured on Myntra's Social Media Platform!</p>
+        <div class="prizes-list">
+            <div class="prize">
+                <div class="img"><img src="./img/1.png" alt="Prize 1" draggable="false"></div>
+                <p>First Prize: ₹10,000 Myntra Gift Voucher</p>
+            </div>
+            <div class="prize">
+                <div class="img"><img src="./img/2.png" alt="Prize 2" draggable="false"></div>
+                <p>Second Prize: ₹5,000 Myntra Gift Voucher</p>
+            </div>
+            <div class="prize">
+                <div class="img"><img src="./img/3.png" alt="Prize 3" draggable="false"></div>
+                <p>Third Prize: Exclusive Fashion Merchandise</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- how to enter the contest -->
+    <div class="entrystep" id="how">
+        <h2>How to Participate?</h2>
+        <p>Join the contest by following these simple steps!</p>
+        <div class="steps">
+            <div class="step">
+                <div class="icon">💡</div>
+                <p>Submit your entry<br><span>Share your entry through our website submission form. Encourage friends and followers to like your submission on the contest page.</span></p>
+            </div>
+            <div class="step">
+                <div class="icon">💡</div>
+                <p>Vote for other entries<br><span>Explore and engage with other submissions. Share your experience and tips in a blog post on our website.</span></p>
+            </div>
+            <div class="step">
+                <div class="icon">💡</div>
+                <p>Selection of Winners<br><span>Winners will be decided based on the number of likes received on their submissions. A leaderboard will be created to showcase the top entries based on likes.</span></p>
+            </div>
+            <div class="step">
+                <div class="icon">💡</div>
+                <p>Spread the word<br><span>Spread the word about the contest by sharing it with your friends and followers. Encourage them to participate and support your entry.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- entry form -->
+    <div class="background">
+        <div class="entry-form" id="form">
+            <h2>Submit Your Entry Form</h2>
+            <form action="#" method="post" enctype="multipart/form-data" name="submit-to-google-sheet">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                
+                <label for="file">Upload a file</label>
+                <input type="file" id="file" name="file" required>
+                
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I have read and agree with the <a href="#">Terms & Conditions</a></label>
+                </div>
+                
+                <button type="submit">Enter</button>
+                <span id="msg" style="display: none;">Entry Submitted Successfully!</span>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="copyright">
+        <div class="container">
+            <p>&copy; 2024 CodeWars. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Function to handle form submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form[name='submit-to-google-sheet']");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+                // Simulate submission success
+                simulateSubmission();
+            });
+        });
+    
+        // Function to simulate submission success
+        function simulateSubmission() {
+            const msgElement = document.getElementById('msg');
+            msgElement.style.display = 'block'; // Display the success message
+            setTimeout(function () {
+                msgElement.style.display = 'none'; // Hide the success message after 3 seconds
+                // Reset the form
+                document.querySelector("form[name='submit-to-google-sheet']").reset();
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+    
+</body>
+</html>
